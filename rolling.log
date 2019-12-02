@@ -1,0 +1,16 @@
+[framework] 2019-12-01 22:33:18,669 - org.activiti.engine.impl.interceptor.CommandContext -4394 [main] ERROR org.activiti.engine.impl.interceptor.CommandContext  - Error while closing command context
+org.activiti.engine.ActivitiObjectNotFoundException: no processes deployed with key 'holiday01'
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.findDeployedLatestProcessDefinitionByKey(DeploymentManager.java:87)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:85)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:35)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:77)
+	at com.test.HolidayStartInstance.main(HolidayStartInstance.java:30)
