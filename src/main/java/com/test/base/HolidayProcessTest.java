@@ -1,4 +1,4 @@
-package com.test;
+package com.test.base;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
