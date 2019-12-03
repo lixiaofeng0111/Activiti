@@ -1,0 +1,22 @@
+1.Activiti的架构说明
+    ProcessEngineConfiguration类:主要是加载activiti.cfg.xml文件
+    ProcessEngine类 :作用是帮助我们快速的得到各个Service接口，并可以生成activiti的工作环境  25张表的生成
+    Service接口：作用是可以快速实现数据库25张表的操作
+    RepositoryService
+    RuntimeService
+    TaskService
+    HistoryService
+2.BPMN的ActivitiDesign插件
+    IDEA工具中安装ActivitiDesigner的注意细节
+3.画出流程定义图
+4.部署流程定义
+    方式一：单个文件(bpmn文件，png文件)
+    方式二：下降bpmn文件，png文件压缩成zip文件（*最终activiti也是以单个文件的形式保存，说明activiti进行了解压的工作）
+5.启动流程实例
+    RuntimeService
+    startProcessInstanceByKey（“key”）
+6.查看任务
+    TaskService taskService.createTaskQuery()
+7.完成任务
+    TaskService   taskService.cpmplete()
+

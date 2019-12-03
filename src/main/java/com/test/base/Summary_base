@@ -1,0 +1,19 @@
+1.什么是工作流
+2.工作流，工作流系统，BPM，BPMN
+3.流程定义，请假流程：填写请假单--部门经理--总经理--人事存档
+4.流程设计器
+    eclipse安装Activiti  Designer
+    idea安装Activiti Desiger
+5.测试是否已经安装成功
+6.为什么使用activiti可以实现业务代码不变更，就可以实现流程更新
+    流程定义图做更新--》先读取节点信息到数据库中--》后续就数据库表进行操作
+7.activiti支持的数据库有哪些
+8.25张表的创建，activiti要能够工作，就必须有表结构的支持
+9.使用java代码方式来生成25张表
+    1)pom.xml 文件需要引入activiti开发相关的坐标
+    2)log4j.properties日志文件添加
+    3）activiti.cfg.xml默认配置化文件，也可以是其它名称配置数据源
+       创建ProcessEngineConfiguration对象，使用脱机方式StandaloneProcessEngineConfiguration,databaseSchemaUpdate = true;
+    4)写java代码
+        ProcessEngineConfiguration类
+        ProcessEngine类
