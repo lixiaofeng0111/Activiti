@@ -1,10 +1,11 @@
-package com.test.promate02.entity;
+package com.test.promate02.processVariable;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Title: Holiday.java
- * File description:
+ * File description:请假实例
  *
  * @copyright: 2019
  * @company: tb
@@ -12,10 +13,13 @@ import java.util.Date;
  * @version: 1.0
  * @date 2019年12月11日
  */
-public class Holiday {
+//如果将pojo类存储到业务流程中就必须实现序列化接口，这是为了防止由于新增字段而无法饭序列化，需要生成serializable
+public class Holiday implements Serializable {
 /**
  * Class description:POJO类（请假申请单类）
  * @Author: lxf
+ * 需要注意的问题：
+ *          注意pojo类型必须实现serializable接口，否则在存储这个pojo类时候会报异常
  */
     private String id; //请假单id
     private String Name; //请假人员名称
